@@ -44,7 +44,7 @@
     },
     {
       "题号": "M011-S005",
-      "查询语句": "region=\"Hebei\" && cloud_name=\"Huawei\""
+      "查询语句": "country=\"CN\" && region=\"Hebei\" && cloud_name=\"Huawei\""
     },
     {
       "题号": "M012-S009",
@@ -216,7 +216,7 @@
     },
     {
       "题号": "M054-S009",
-      "查询语句": "country=\"GB\" && org=\"DigitalOcean\" && body=\"/api/show\""
+      "查询语句": "country=\"GB\" && (cloud_name=\"DigitalOcean\" || org=\"DigitalOcean\") && body=\"/api/show\""
     },
     {
       "题号": "M055-S003",
@@ -288,7 +288,7 @@
     },
     {
       "题号": "M072-S008",
-      "查询语句": "domain=\".edu.ar\" && (port=\"80\" || port=\"443\") && server!=\"Nginx\" && category!=\"WAF\""
+      "查询语句": "domain=\".edu.ar\" && (port=\"80\" || port=\"443\") && server!=\"nginx\" && server!=\"WAF\""
     },
     {
       "题号": "M073-S003",
@@ -304,7 +304,7 @@
     },
     {
       "题号": "M076-S004",
-      "查询语句": "title=\"\" && status_code=\"200\" && fid!=\"\" && icon_hash!=\"\" && host=\"admin\" && (domain=\".cn\" || domain*=\"????.com\")"
+      "查询语句": "title=\"\" && status_code=\"200\" && fid!=\"\" && icon_hash!=\"\" && host=\"admin\" && (domain*=\"*.cn\" || domain*=\"????.com\")"
     },
     {
       "题号": "M077-S009",
@@ -312,7 +312,7 @@
     },
     {
       "题号": "M078-S009",
-      "查询语句": "body=\"\\\"exception\\\": \\\"Symfony\\Component\\ErrorHandler\\Error\\FatalError\\\"\""
+      "查询语句": "body=\"\\\"exception\\\": \\\"Symfony\\\\Component\\\\ErrorHandler\\\\Error\\\\FatalError\\\"\""
     },
     {
       "题号": "M079-S006",
@@ -332,7 +332,7 @@
     },
     {
       "题号": "M083-S008",
-      "查询语句": "header=\"Server: nginx\" && title=\"Welcome\""
+      "查询语句": "server=\"nginx\" && title=\"Welcome\""
     },
     {
       "题号": "M084-S004",
@@ -348,7 +348,7 @@
     },
     {
       "题号": "M087-S009",
-      "查询语句": "(header=\"Server: Tengine\" || header=\"x-cache: MISS\")"
+      "查询语句": "server=\"Tengine\" || (header=\"x-cache\" && header=\"MISS\")"
     },
     {
       "题号": "M088-S004",
@@ -400,7 +400,7 @@
     },
     {
       "题号": "M100-S001",
-      "查询语句": "cert.issuer.cn=\"ZeroSSL ECC DV SSL CA 2\" && cert.sn=\"63:BD:83:71:62:14:83:6E:F8:00:75:35:61:61:EB:06\""
+      "查询语句": "cert.issuer.cn=\"ZeroSSL ECC DV SSL CA 2\" && cert.sn=\"132577581667764526475870473477991557894\""
     }
   ]
 }
